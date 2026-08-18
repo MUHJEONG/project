@@ -1,1 +1,833 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>자율형 AI Agent의 대중화가 가져올 업무 자동화 시장의 재편</title>
 
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+      background: #07111f;
+      color: #e8eef7;
+      line-height: 1.75;
+    }
+
+    header {
+      min-height: 92vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 50px 20px;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(0, 229, 255, 0.18), transparent 30%),
+        radial-gradient(circle at 80% 30%, rgba(138, 92, 246, 0.18), transparent 30%),
+        #07111f;
+    }
+
+    .hero {
+      max-width: 980px;
+    }
+
+    .eyebrow {
+      font-size: 15px;
+      letter-spacing: 3px;
+      color: #67e8f9;
+      margin-bottom: 24px;
+      font-weight: bold;
+    }
+
+    header h1 {
+      font-size: 52px;
+      line-height: 1.25;
+      margin: 0 0 24px;
+    }
+
+    header p {
+      font-size: 22px;
+      color: #b8c5d6;
+      margin-bottom: 36px;
+    }
+
+    .hero-flow {
+      margin-top: 50px;
+      font-size: 20px;
+      color: #dbeafe;
+    }
+
+    .hero-flow span {
+      display: inline-block;
+      margin: 8px 10px;
+      padding: 12px 18px;
+      border-radius: 30px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+
+    .arrow-inline {
+      color: #67e8f9;
+      font-size: 26px;
+      font-weight: bold;
+    }
+
+    .container {
+      max-width: 1080px;
+      margin: auto;
+      padding: 70px 20px;
+    }
+
+    section {
+      background: #0d1827;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 20px;
+      padding: 44px;
+      margin-bottom: 36px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.20);
+    }
+
+    h2 {
+      font-size: 30px;
+      margin-top: 0;
+      margin-bottom: 25px;
+      color: #f8fafc;
+    }
+
+    h3 {
+      color: #7dd3fc;
+      margin-top: 32px;
+      font-size: 21px;
+    }
+
+    p {
+      color: #cbd5e1;
+    }
+
+    .highlight {
+      background: linear-gradient(
+        90deg,
+        rgba(14,165,233,0.15),
+        rgba(139,92,246,0.12)
+      );
+      border-left: 5px solid #22d3ee;
+      padding: 22px;
+      margin: 28px 0;
+      font-size: 19px;
+      font-weight: bold;
+      color: #f8fafc;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 24px;
+      overflow: hidden;
+    }
+
+    th, td {
+      border: 1px solid #263548;
+      padding: 15px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background: #152238;
+      color: #e0f2fe;
+    }
+
+    td {
+      background: #0b1624;
+      color: #cbd5e1;
+    }
+
+    .flow {
+      text-align: center;
+      font-size: 21px;
+      line-height: 2;
+      padding: 20px 0;
+    }
+
+    .flow .box {
+      display: inline-block;
+      min-width: 240px;
+      padding: 17px 24px;
+      border-radius: 14px;
+      background: #111f31;
+      border: 1px solid #29425f;
+      color: #f8fafc;
+      margin: 5px;
+    }
+
+    .arrow {
+      font-size: 30px;
+      color: #22d3ee;
+      margin: 8px 0;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+      margin-top: 24px;
+    }
+
+    .card {
+      background: #0a1422;
+      border: 1px solid #24364c;
+      border-radius: 16px;
+      padding: 24px;
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: #93c5fd;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 7px 12px;
+      border-radius: 18px;
+      margin: 5px 4px;
+      background: rgba(34,211,238,0.10);
+      border: 1px solid rgba(34,211,238,0.24);
+      color: #a5f3fc;
+      font-size: 14px;
+    }
+
+    .market {
+      background: linear-gradient(
+        135deg,
+        rgba(2,132,199,0.10),
+        rgba(109,40,217,0.10)
+      );
+    }
+
+    .danger {
+      border-left-color: #fb7185;
+      background: rgba(244,63,94,0.08);
+    }
+
+    .future {
+      border: 1px solid rgba(34,211,238,0.28);
+    }
+
+    .timeline {
+      margin-top: 30px;
+    }
+
+    .year {
+      margin: 28px 0;
+      padding-left: 25px;
+      border-left: 3px solid #22d3ee;
+    }
+
+    .year strong {
+      color: #67e8f9;
+      font-size: 22px;
+    }
+
+    .big-conclusion {
+      text-align: center;
+      padding: 60px 30px;
+      font-size: 25px;
+      line-height: 1.7;
+      color: white;
+    }
+
+    .big-conclusion strong {
+      color: #67e8f9;
+    }
+
+    .source-list a {
+      color: #7dd3fc;
+      text-decoration: none;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 50px 20px;
+      color: #64748b;
+      font-size: 14px;
+    }
+
+    @media (max-width: 760px) {
+      header h1 {
+        font-size: 35px;
+      }
+
+      header p {
+        font-size: 18px;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 28px;
+      }
+
+      table {
+        font-size: 13px;
+      }
+
+      .hero-flow span {
+        display: block;
+        margin: 10px auto;
+      }
+
+      .arrow-inline {
+        display: block;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="hero">
+    <div class="eyebrow">MISSION 02 · AI BUSINESS IMPACT</div>
+
+    <h1>
+      자율형 AI Agent의 대중화가 가져올<br>
+      업무 자동화 시장의 재편
+    </h1>
+
+    <p>
+      Grok Bot 스타일의 업무 자동화가<br>
+      기업과 노동시장, SaaS, IT 인프라에 미칠 향후 파장
+    </p>
+
+    <div class="hero-flow">
+      <span>Chatbot</span>
+      <span class="arrow-inline">→</span>
+      <span>Copilot</span>
+      <span class="arrow-inline">→</span>
+      <span>Agent</span>
+      <span class="arrow-inline">→</span>
+      <span>AI Workforce</span>
+    </div>
+  </div>
+</header>
+
+
+<div class="container">
+
+<section>
+  <h2>1. 문제 제기</h2>
+
+  <p>
+    2026년 8월 11일 공개된 Grok Bot은 기존 생성형 AI와 다른 방향을 보여준다.
+    기존 AI가 사용자의 질문에 답하거나 문서를 작성하는 수준이었다면,
+    Grok Bot은 실제 앱과 웹사이트를 사용하며 업무를 수행하는
+    상시형 AI Agent를 지향한다.
+  </p>
+
+  <p>
+    각 Bot은 자체적인 컴퓨팅 환경에서 동작하고,
+    사용자의 지시에 따라 여러 단계의 업무를 수행하며
+    필요할 때만 사용자에게 확인을 요청하는 구조를 가진다.
+  </p>
+
+  <div class="highlight">
+    이번 변화의 핵심은 AI 성능 자체가 아니라,
+    자동화를 구축할 수 있는 사람의 범위가
+    개발자와 IT 전문가에서 일반 사용자까지 확대된다는 점이다.
+  </div>
+
+  <div class="flow">
+    <div class="box">기존 자동화</div>
+    <div class="arrow">↓</div>
+    개발자 · API · Workflow 설계 · RPA 구축
+    <div class="arrow">↓</div>
+    <div class="box">자율형 AI Agent</div>
+    <div class="arrow">↓</div>
+    자연어로 업무 설명 → Agent가 직접 실행
+  </div>
+</section>
+
+
+<section>
+  <h2>2. 기존 업무 자동화와 자율형 AI Agent의 차이</h2>
+
+  <table>
+    <tr>
+      <th>구분</th>
+      <th>기존 RPA / 자동화</th>
+      <th>자율형 AI Agent</th>
+    </tr>
+
+    <tr>
+      <td>업무 지시</td>
+      <td>정해진 Workflow 설계</td>
+      <td>자연어로 목표 전달</td>
+    </tr>
+
+    <tr>
+      <td>구축 주체</td>
+      <td>개발자 / IT 부서</td>
+      <td>일반 사용자까지 확대 가능</td>
+    </tr>
+
+    <tr>
+      <td>업무 방식</td>
+      <td>규칙 기반 실행</td>
+      <td>상황을 판단하며 단계 수행</td>
+    </tr>
+
+    <tr>
+      <td>예외 대응</td>
+      <td>사전에 정의 필요</td>
+      <td>상황에 따라 재판단 가능</td>
+    </tr>
+
+    <tr>
+      <td>시스템 활용</td>
+      <td>API / Script / RPA 연동</td>
+      <td>앱 및 웹사이트 직접 활용</td>
+    </tr>
+
+    <tr>
+      <td>실행 구조</td>
+      <td>정해진 Trigger 기반</td>
+      <td>지속적이고 자율적인 실행</td>
+    </tr>
+
+    <tr>
+      <td>확장 방식</td>
+      <td>Workflow 추가 개발</td>
+      <td>Agent 추가 및 역할 분담</td>
+    </tr>
+  </table>
+
+  <div class="highlight">
+    자동화의 경쟁력이 “개발 능력”에서
+    “업무를 명확하게 정의하고 위임하는 능력”으로 이동할 가능성이 있다.
+  </div>
+</section>
+
+
+<section>
+  <h2>3. Automation Democratization</h2>
+
+  <p>
+    자율형 AI Agent가 가져올 가장 큰 변화 중 하나는
+    자동화의 대중화이다.
+  </p>
+
+  <p>
+    과거에는 업무 자동화를 위해 Python, API, Script,
+    Workflow, RPA 등에 대한 기술 지식이 필요했다.
+    따라서 자동화는 IT 부서나 전문 개발자의 영역에 가까웠다.
+  </p>
+
+  <p>
+    그러나 Agent 서비스가 컴퓨팅 환경, 실행 도구,
+    앱 연결, 업무 메모리 등을 서비스 내부에 제공하면
+    사용자는 기술 구현보다 업무 목표를 설명하는 데 집중할 수 있다.
+  </p>
+
+  <div class="flow">
+    <div class="box">과거</div>
+    <div class="arrow">↓</div>
+    자동화할 줄 아는 사람이 자동화를 만든다
+    <div class="arrow">↓</div>
+    <div class="box">Agent 시대</div>
+    <div class="arrow">↓</div>
+    업무를 설명할 줄 아는 사람이 자동화를 사용한다
+  </div>
+
+  <div class="highlight">
+    AI Democratization의 다음 단계는
+    Automation Democratization이 될 수 있다.
+  </div>
+</section>
+
+
+<section>
+  <h2>4. 업무의 기본 단위가 바뀐다</h2>
+
+  <p>
+    지금까지 기업에서 업무 생산성의 기본 단위는 사람 한 명이었다.
+    그러나 자율형 Agent가 확산되면 한 명의 직원이
+    여러 개의 Agent를 동시에 관리하는 구조가 가능해질 수 있다.
+  </p>
+
+  <div class="cards">
+
+    <div class="card">
+      <h3>자료조사 Agent</h3>
+      <p>
+        시장 정보, 경쟁사 자료, 뉴스 등을 찾아
+        필요한 내용만 정리한다.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>메일 Agent</h3>
+      <p>
+        이메일을 분류하고 답변 초안을 작성하며
+        필요한 후속 업무를 연결한다.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>보고서 Agent</h3>
+      <p>
+        데이터를 정리하고 주요 내용을 추출해
+        보고서 초안을 작성한다.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>업무 운영 Agent</h3>
+      <p>
+        반복 업무를 확인하고 일정 또는 조건에 따라
+        지속적으로 실행한다.
+      </p>
+    </div>
+
+  </div>
+
+  <div class="highlight">
+    1 Employee = 1 Worker
+    <br><br>
+    ↓
+    <br><br>
+    1 Employee = AI Agent Team Manager
+  </div>
+
+</section>
+
+
+<section class="market">
+  <h2>5. 향후 시장에 미칠 파장</h2>
+
+  <h3>① RPA 시장</h3>
+
+  <p>
+    기존 RPA는 정해진 절차와 반복 업무에 강하다.
+    하지만 업무의 목표를 이해하고 상황에 따라 행동하는 Agent가 확산되면
+    자동화 시장의 중심은 Rule-based Automation에서
+    Agent-based Automation으로 이동할 가능성이 있다.
+  </p>
+
+  <p>
+    다만 RPA가 완전히 사라지기보다는
+    정확성과 반복 실행이 중요한 영역은 RPA가 담당하고,
+    판단과 업무 조율은 AI Agent가 담당하는 혼합 구조가 나타날 수 있다.
+  </p>
+
+  <div class="highlight">
+    RPA → Agent Orchestration + Automation
+  </div>
+
+
+  <h3>② SaaS 시장</h3>
+
+  <p>
+    현재 기업용 소프트웨어는 사람이 직접 화면을 보고 사용하는 것을 전제로 한다.
+    하지만 Agent가 사람을 대신해 SaaS를 조작하게 되면
+    소프트웨어의 실질적인 사용 주체가 변화할 수 있다.
+  </p>
+
+  <div class="flow">
+    Human
+    <div class="arrow">↓</div>
+    Software
+    <div class="arrow">↓</div>
+    <strong>Human → Agent → Software</strong>
+  </div>
+
+  <p>
+    이에 따라 화면 UI만큼
+    API, Agent Interface, 권한관리,
+    데이터 접근 구조가 중요해질 가능성이 높다.
+  </p>
+
+
+  <h3>③ BPO 및 반복 사무업무</h3>
+
+  <p>
+    고객 상담, 자료 조사, 데이터 입력,
+    이메일 대응, 일정관리, 영업지원 등
+    반복적이고 디지털화된 업무는 Agent의 직접적인 영향을 받을 수 있다.
+  </p>
+
+  <div class="highlight">
+    기업의 질문이
+    “사람을 추가 채용할 것인가?”에서
+    “사람을 채용할 것인가, Agent를 추가할 것인가?”로
+    바뀔 가능성이 있다.
+  </div>
+
+
+  <h3>④ 기업 IT 인프라 시장</h3>
+
+  <p>
+    AI Agent가 실제 기업 시스템에서 업무를 수행하려면
+    Identity, Authentication, Authorization,
+    Security, Logging, Monitoring 등
+    안전한 실행 환경이 반드시 필요하다.
+  </p>
+
+  <div>
+    <span class="tag">IAM</span>
+    <span class="tag">Zero Trust</span>
+    <span class="tag">Cloud</span>
+    <span class="tag">Network</span>
+    <span class="tag">Security</span>
+    <span class="tag">Observability</span>
+    <span class="tag">Agent Governance</span>
+  </div>
+
+  <p>
+    따라서 Agent 확산은 소프트웨어 자동화 시장뿐 아니라
+    Cloud, Network, Security, Data Center,
+    Identity 시장에도 추가적인 수요를 만들 수 있다.
+  </p>
+
+
+  <h3>⑤ 노동시장</h3>
+
+  <p>
+    단기적으로는 AI가 사람 전체를 대체하기보다
+    AI Agent를 적극적으로 활용하는 사람과
+    그렇지 않은 사람 사이의 생산성 격차가 먼저 확대될 가능성이 높다.
+  </p>
+
+  <div class="highlight">
+    초기 변화의 핵심은 Head Count 감소보다
+    Employee 1명당 Work Capacity 증가일 가능성이 높다.
+  </div>
+</section>
+
+
+<section>
+  <h2>6. 자율형 Agent의 한계</h2>
+
+  <p>
+    AI Agent가 실제 행동을 수행하기 시작하면
+    기존 Chatbot보다 훨씬 높은 수준의 통제가 필요하다.
+  </p>
+
+  <div class="cards">
+
+    <div class="card">
+      <h3>보안</h3>
+      <p>
+        Agent가 메일, ERP, CRM, 사내 시스템에 접근하려면
+        실제 업무 권한이 필요하다.
+        계정 탈취나 오작동 시 피해 범위가 커질 수 있다.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>책임</h3>
+      <p>
+        잘못된 메일 발송, 주문, 데이터 삭제 등이 발생했을 때
+        Agent와 사용자, 기업 중 누가 책임질 것인지
+        새로운 기준이 필요하다.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>정확성</h3>
+      <p>
+        Chatbot의 오류는 답변으로 끝날 수 있지만
+        Agent의 오류는 실제 Action으로 이어질 수 있다.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>통제 가능성</h3>
+      <p>
+        기업 환경에서는 Agent의 행동을 기록하고,
+        승인하고, 중단하고, 되돌릴 수 있는
+        Governance 체계가 필요하다.
+      </p>
+    </div>
+
+  </div>
+
+  <div class="highlight danger">
+    AI Assistant 시대에는 “정확한 답변”이 중요했다면,
+    AI Agent 시대에는 “신뢰성과 통제 가능성”이
+    핵심 경쟁력이 될 가능성이 높다.
+  </div>
+</section>
+
+
+<section class="future">
+  <h2>7. 향후 1~2년 전망</h2>
+
+  <div class="timeline">
+
+    <div class="year">
+      <strong>2026</strong>
+      <p>
+        AI Assistant에서 AI Agent로 이동.
+        사용자가 AI에게 질문하는 단계를 넘어
+        실제 업무를 위임하는 서비스가 확산된다.
+      </p>
+    </div>
+
+    <div class="year">
+      <strong>2027</strong>
+      <p>
+        개인별 Agent, 부서별 Agent,
+        업무별 Agent가 기업 내부에서 증가한다.
+        기업은 Agent 계정과 권한을 관리하는
+        새로운 IT 운영 체계를 만들기 시작한다.
+      </p>
+    </div>
+
+    <div class="year">
+      <strong>2028</strong>
+      <p>
+        여러 Agent가 역할을 나누고 서로 협업하는
+        Multi-Agent 업무 구조가 확대될 가능성이 있다.
+        사람은 직접 업무를 수행하는 역할에서
+        목표 설정, 판단, 검증, 통제 역할로 이동한다.
+      </p>
+    </div>
+
+  </div>
+
+  <div class="flow">
+    <div class="box">Human Workforce</div>
+    <div class="arrow">↓</div>
+    <div class="box">Human + AI Assistant</div>
+    <div class="arrow">↓</div>
+    <div class="box">Human + AI Agent</div>
+    <div class="arrow">↓</div>
+    <div class="box">AI Workforce</div>
+  </div>
+
+</section>
+
+
+<section>
+  <h2>8. 시장 변화의 본질</h2>
+
+  <p>
+    Grok Bot과 같은 서비스의 의미는
+    새로운 Chatbot이 하나 더 등장했다는 데 있지 않다.
+  </p>
+
+  <p>
+    중요한 점은 AI가 사람이 사용하는 도구에서
+    실제 업무를 위임받고 실행하는 주체로 이동하고 있다는 것이다.
+  </p>
+
+  <div class="big-conclusion">
+
+    Chatbot은 <strong>답변</strong>했다.
+    <br><br>
+
+    Copilot은 사람을 <strong>도왔다.</strong>
+    <br><br>
+
+    Agent는 업무를 <strong>수행한다.</strong>
+    <br><br>
+
+    그리고 다음 단계는
+    <br>
+
+    <strong>사람과 AI Agent가 함께 일하는 AI Workforce</strong>
+    <br>
+
+    가 될 가능성이 높다.
+
+  </div>
+</section>
+
+
+<section>
+  <h2>9. 결론</h2>
+
+  <div class="highlight">
+    Grok Bot 스타일의 업무 자동화가 시장에 미칠 가장 큰 파장은
+    AI의 능력 향상이 아니라
+    “자동화의 진입장벽을 낮추는 것”이다.
+  </div>
+
+  <p>
+    사용자가 복잡한 Workflow를 직접 만들지 않고도
+    자연어만으로 업무를 자동화할 수 있다면
+    AI Agent의 사용자는 개발자 중심에서
+    일반 사무직과 현업 사용자까지 빠르게 확대될 수 있다.
+  </p>
+
+  <p>
+    그 결과 RPA, SaaS, BPO, 노동시장뿐 아니라
+    Cloud, Network, Security, Identity 등
+    기업 IT 인프라 시장에도 새로운 변화가 발생할 가능성이 높다.
+  </p>
+
+  <div class="highlight">
+    향후 기업 경쟁력은 단순히
+    “AI를 가지고 있는가”가 아니라
+    “사람과 여러 AI Agent를 얼마나 안전하고 효율적으로
+    함께 일하게 만들 수 있는가”에서 결정될 가능성이 높다.
+  </div>
+
+</section>
+
+
+<section>
+  <h2>10. AI 활용 방식</h2>
+
+  <p>
+    본 과제는 생성형 AI를 활용해
+    2026년 8월 공개된 Grok Bot의 특징을 조사하고,
+    기존 RPA 및 업무 자동화 방식과 비교한 뒤
+    향후 기업시장에 미칠 영향을 분석하는 방식으로 수행하였다.
+  </p>
+
+  <p>
+    단순히 AI가 제시한 전망을 사용하는 대신
+    업무 자동화, IT 운영, Cloud, Network,
+    Security 구조와 연결해 시장 파급효과를 재구성하였다.
+  </p>
+</section>
+
+
+<section>
+  <h2>11. 주요 참고자료</h2>
+
+  <div class="source-list">
+    <p>
+      1. xAI, <strong>Introducing Grok Bot</strong>, 2026.08.11<br>
+      <a href="https://x.ai/news/introducing-grok-bot" target="_blank">
+        https://x.ai/news/introducing-grok-bot
+      </a>
+    </p>
+
+    <p>
+      2. The Verge,
+      <strong>Grok is now an AI 'teammate' you can assign work</strong>, 2026<br>
+      <a href="https://www.theverge.com/ai-artificial-intelligence/978666/spacexai-grok-bot-ai-agent-beta-launch" target="_blank">
+        관련 기사 보기
+      </a>
+    </p>
+  </div>
+</section>
+
+</div>
+
+
+<div class="footer">
+  AI 기반 비즈니스 변화 분석 과제 · Mission 02<br>
+  Autonomous AI Agent & Business Automation Impact
+</div>
+
+</body>
+</html>
